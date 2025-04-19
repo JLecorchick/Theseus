@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #e1e7dc;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projfxmldemo.CreateListingController">
+   <children>
+        <VBox alignment="TOP_CENTER" layoutY="61.0" prefWidth="360.0" spacing="15" style="-fx-padding: 30;">
+            <Label text="Create a Listing" textFill="#3c4c34">
+            <font>
+               <Font name="Avenir Heavy" size="24.0" />
+            </font>
+         </Label>
+            <TextField fx:id="titleField" promptText="Title" style="-fx-prompt-text-fill: #bfb5b2;">
+            <font>
+               <Font name="Avenir Medium" size="13.0" />
+            </font></TextField>
+            <TextArea fx:id="descriptionField" promptText="Description" style="-fx-prompt-text-fill: #bfb5b2;" wrapText="true">
+            <font>
+               <Font name="Avenir Medium" size="13.0" />
+            </font></TextArea>
+            <TextField fx:id="priceField" promptText="Price" style="-fx-prompt-text-fill: #bfb5b2;">
+            <font>
+               <Font name="Avenir Medium" size="13.0" />
+            </font></TextField>
+         <HBox prefHeight="21.0" prefWidth="300.0">
+            <children>
+                  <ComboBox fx:id="categoryComboBox" prefWidth="100.0" promptText="Category" style="-fx-background-color: #f9f9f6; -fx-font-family: avenir;" />
+               <Region prefHeight="28.0" prefWidth="6.0" />
+               <ComboBox fx:id="itemtypeComboBox" prefHeight="28.0" prefWidth="105.0" promptText="Item Type" style="-fx-background-color: #f9f9f6; -fx-font-family: avenir;" />
+               <Region prefHeight="28.0" prefWidth="6.0" />
+               <ComboBox fx:id="colorComboBox" prefHeight="28.0" prefWidth="83.0" promptText="Color" style="-fx-background-color: #f9f9f6; -fx-font-family: avenir;" />
+            </children>
+         </HBox>
+         <HBox>
+            <children>
+                  <Button fx:id="imagelistingButton" style="-fx-background-color: #3c4c34; -fx-text-fill: white;" text="Upload Image">
+                  <font>
+                     <Font name="Avenir Medium" size="13.0" />
+                  </font>
+               </Button>
+               <Region prefHeight="28.0" prefWidth="92.0" />
+            </children>
+         </HBox>
+         <HBox alignment="TOP_RIGHT">
+            <children>
+                  <Button fx:id="postButton" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #3c4c34; -fx-text-fill: white; -fx-font-weight: bold;" text="Post Listing 🎉">
+                  <font>
+                     <Font name="Avenir Medium" size="13.0" />
+                  </font>
+               </Button>
+            </children>
+         </HBox>
+        </VBox>
+      <ButtonBar layoutY="590.0" prefHeight="60.0" prefWidth="360.0" style="-fx-background-color: #3c4c34;">
+         <buttons>
+            <BottomNavigationButton fx:id="listmenuButton" prefHeight="27.0" prefWidth="103.0" style="-fx-background-color: #e1e7dc;" text="List" textAlignment="CENTER" textFill="#32261e">
+               <font>
+                  <Font name="Avenir Medium" size="14.0" />
+               </font>
+            </BottomNavigationButton>
+            <BottomNavigationButton fx:id="exploremenuButton" style="-fx-background-color: #e1e7dc;" text="Explore" textFill="#32261e">
+               <font>
+                  <Font name="Avenir Medium" size="14.0" />
+               </font>
+            </BottomNavigationButton>
+            <BottomNavigationButton fx:id="profilemenuButton" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #e1e7dc;" text="Profile" textFill="#32261e">
+               <font>
+                  <Font name="Avenir Medium" size="14.0" />
+               </font>
+            </BottomNavigationButton>
+         </buttons>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </ButtonBar>
+      <ButtonBar prefHeight="60.0" prefWidth="360.0" style="-fx-background-color: #3c4c34;">
+         <buttons>
+            <ImageView fitHeight="27.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/image-2.png" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_LEFT" minWidth="69.0" prefHeight="20.0" text="RoomCycle" textFill="#f9f9f6">
+               <font>
+                  <Font name="Avenir Heavy" size="14.0" />
+               </font>
+            </Label>
+            <Region prefHeight="60.0" prefWidth="200.0" />
+            <Button fx:id="createlistingbackButton" alignment="TOP_RIGHT" minWidth="30.0" prefHeight="28.0" prefWidth="84.0" style="-fx-background-color: #3c4c34; -fx-text-fill: white;" text="&lt; Back">
+               <font>
+                  <Font name="Avenir Medium" size="13.0" />
+               </font>
+            </Button>
+         </buttons>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </ButtonBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="360.0"
+            style="-fx-background-color: #e1e7dc;"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="projfxmldemo.controllers.LoginController">
+    <children>
+        <Label layoutX="111" layoutY="113"
+               style="-fx-text-fill: #3c4c34;"
+               text="Welcome to ">
+            <font><Font name="Avenir Medium" size="24"/></font>
+        </Label>
+
+        <Label layoutX="91" layoutY="137"
+               prefHeight="33" prefWidth="179"
+               style="-fx-text-fill: #3c4c34;"
+               text="RoomCycle">
+            <font><Font name="Avenir Heavy" size="34"/></font>
+        </Label>
+
+        <ImageView fx:id="logoImage"
+                   layoutX="121" layoutY="180"
+                   fitWidth="120" fitHeight="120"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../images/logo.png"/>
+            </image>
+        </ImageView>
+
+        <TextField fx:id="usernameField"
+                   layoutX="98" layoutY="300"
+                   promptText="Username"
+                   style="-fx-background-color: #f9f9f6; -fx-prompt-text-fill: #bfb5b2;">
+            <font><Font name="Avenir Medium" size="13"/></font>
+        </TextField>
+
+        <PasswordField fx:id="passwordField"
+                       layoutX="98" layoutY="338"
+                       promptText="Password"
+                       style="-fx-background-color: #f9f9f6; -fx-prompt-text-fill: #bfb5b2;">
+            <font><Font name="Avenir Medium" size="13"/></font>
+        </PasswordField>
+
+        <Button fx:id="loginButton"
+                layoutX="155" layoutY="382"
+                text="Login"
+                style="-fx-background-color: #3c4c34; -fx-text-fill: white;">
+            <font><Font name="Avenir Medium" size="13"/></font>
+        </Button>
+
+        <Label fx:id="lbMessage"
+               layoutX="98" layoutY="420"
+               style="-fx-text-fill: red;"/>
+
+        <Hyperlink fx:id="signupLink"
+                   layoutX="97" layoutY="455"
+                   text="New around here? Sign up"
+                   style="-fx-text-fill: #517a9b;">
+            <font><Font name="Avenir Medium" size="13"/></font>
+        </Hyperlink>
+    </children>
+</AnchorPane>
